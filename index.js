@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // POST /api/apple/auth
-app.post('/api/apple/auth', (req, res) => {
+app.all('/api/apple/auth', (req, res) => {
   const inputData = req.body;
 
   // Log to console
